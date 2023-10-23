@@ -42,5 +42,35 @@ Yeh everyday types TypeScript mein aam taur par istemal hote hain. In types ka i
 
 
 
+Tuples, arrays, aur objects Typescript mein data ko store karne ke alag-alag tareekon ko represent karte hain aur unme kuch khas fark hote hain:
+
+**1. Tuple:**
+   - Tuples fixed length arrays hoti hain, jisme har element ka specific data type hota hai.
+   - Tuples mein elements order mein store hote hain aur unka access index ke through hota hai.
+   - Example:
+     ```typescript
+     let person: [string, number] = ["John", 30];
+     ```
+
+**2. Array:**
+   - Arrays variable length lists hote hain, jisme elements aik hi data type ke hote hain.
+   - Arrays mein elements bina kisi fixed order ya sequence ke store hote hain, aur unka access index ke through hota hai.
+   - Example:
+     ```typescript
+     let fruits: string[] = ["apple", "banana", "cherry"];
+     ```
+
+**3. Object:**
+   - Objects key-value pairs ki collection hote hain, jisme values ki data type alag alag ho sakti hain.
+   - Objects mein har key ke sath associated value hota hai aur unka access key ke through hota hai.
+   - Example:
+     ```typescript
+     let person: { name: string, age: number } = { name: "John", age: 30 };
+     ```
+
+In teeno mein se har ek ka istemal specific use case ke hisab se hota hai. Tuple fixed length data structures ke liye istemal hoti hai, array variable length lists ke liye, aur object data modeling ke liye jahan key-value pairs important hain. Aap in tino types ko apne requirements ke hisab se istemal kar sakte hain.
+
+
+
 
 
