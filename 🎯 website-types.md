@@ -145,3 +145,4 @@ I understand that it can be a bit confusing, so let's simplify the concept:
 In simple terms, CSR means the web page is initially like a blank book with chapter titles (content fetched later), while SSR means the web page is like a printed book with all content immediately available. 
 
 CSR is suitable for interactive apps, like games or social media, where you need real-time updates. SSR is great for content-heavy pages like blogs or e-commerce, where you want fast loading and SEO optimization.
+
