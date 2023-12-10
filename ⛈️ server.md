@@ -1,4 +1,4 @@
-Certainly! Here's the information presented with headings and lines:
+I'm Certainly! Here's the information presented with headings and lines:
 
 **AWS:**
 - **Hosting Type:** Cloud Infrastructure
@@ -66,7 +66,6 @@ Certainly! Here's the information presented with headings and lines:
 This presentation provides a clearer separation between each platform's details.
 
 
-Creating a mind map in a text format isn't the most visually representative, but I'll provide a hierarchical representation with headings and lines:
 
 ```
 - **AWS**
@@ -112,4 +111,3 @@ Creating a mind map in a text format isn't the most visually representative, but
   - *AI Integration:* Limited AI capabilities, best for frontend and static sites
 ```
 
-This provides a structured representation of the information with headings and lines, but for a visual mind map, you may want to use dedicated mind mapping tools or diagrams.
