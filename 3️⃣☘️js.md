@@ -49,7 +49,8 @@ const MyComponent = () => {
 
 
 
-2️⃣👀
+
+☘️👀
 Certainly, let's break down each part with simple explanations:
 
 ```jsx
