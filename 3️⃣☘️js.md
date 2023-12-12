@@ -123,3 +123,69 @@ createRoot(document.getElementById('root')).render(
 - **Create a root and render the 3D scene inside it:**
   - **Set up the root for rendering and display the 3D scene with two boxes.**
 
+
+🐕‍🦺
+
+To get started with React Three Fiber (R3F), you need to install the necessary libraries. You can do this using either npm or yarn:
+
+```bash
+# Using Yarn:
+yarn add react-three-fiber three
+# Using NPM:
+npm i react-three-fiber three
+```
+[Source 4](https://r3f.netlify.app/docs/getting-started/)
+
+After installing the necessary libraries, you can create a simple 3D scene using R3F. Here's a step-by-step guide on how to create a cube:
+
+1. First, import the necessary modules and components:
+
+```jsx
+import React, { useRef, useState } from 'react'
+import { Canvas, useFrame } from '@react-three/fiber'
+```
+[Source 0](https://docs.pmnd.rs/react-three-fiber/getting-started/introduction)
+
+2. Next, create a `Box` component. This component will represent a 3D box in the scene. The `Box` component uses React's `useRef` and `useState` hooks to manage its state and reference to the mesh:
+
+```jsx
+function Box(props) {
+ const meshRef = useRef()
+ const [hovered, setHover] = useState(false)
+ const [active, setActive] = useState(false)
+ useFrame((state, delta) => (meshRef.current.rotation.x += delta))
+ return (
+   <mesh
+     {...props}
+     ref={meshRef}
+     scale={active ? 1.5 : 1}
+     onClick={(event) => setActive(!active)}
+     onPointerOver={(event) => setHover(true)}
+     onPointerOut={(event) => setHover(false)}>
+     <boxGeometry args={[1, 1, 1]} />
+     <meshStandardMaterial color={hovered ? 'hotpink' : 'orange'} />
+   </mesh>
+ )
+}
+```
+[Source 0](https://docs.pmnd.rs/react-three-fiber/getting-started/introduction)
+
+3. Finally, create an `App` component that uses the `Canvas` component to render the 3D scene. The `Canvas` component sets up a scene and a camera, and it renders the scene every frame:
+
+```jsx
+export default function App() {
+ return (
+   <Canvas>
+     <ambientLight />
+     <pointLight position={[10, 10, 10]} />
+     <Box position={[-1.2, 0, 0]} />
+     <Box position={[1.2, 0, 0]} />
+   </Canvas>
+ )
+}
+```
+[Source 0](https://docs.pmnd.rs/react-three-fiber/getting-started/introduction)
+
+This code will create a scene with two boxes. The boxes will rotate when clicked, and their color will change when hovered over. The `ambientLight` and `pointLight` components add light to the scene, making the boxes visible.
+
+Remember, before diving into R3F, it's essential to have a basic understanding of Three.js and React. If you're new to these libraries, consider going through their official documentation to get a solid foundation.
