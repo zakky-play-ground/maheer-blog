@@ -1,0 +1,15 @@
+Here is a table of key concepts in React Three Fiber, their usage, examples, and analogies to our human mind and body:
+
+| Concept | Usage | Example | Analogy | What is Happening | What it Makes | React Three Fiber Code | WebGL Code |
+|---------|-------|---------|---------|-------------------|---------------|------------------------|------------|
+| Scene | The container for all objects, lights, and cameras | `<Canvas>` | Our visual field | A scene is being created to hold all the elements | It sets up the environment for 3D objects | `<Canvas>` | `<canvas>` |
+| Camera | Defines the perspective from which the scene is viewed | `<PerspectiveCamera>` | Our eyes | The camera is setting up a viewpoint in the scene | It creates the viewpoint for the 3D objects | `<PerspectiveCamera>` | `var camera = new THREE.PerspectiveCamera()` |
+| Light | Illuminates the scene | `<ambientLight>` | Natural light | Light is being added to the scene | It illuminates the objects in the scene | `<ambientLight>` | `var light = new THREE.AmbientLight()` |
+| Geometry | Defines the shape of an object | `<BoxGeometry>` | A box shape | A box is being defined | It creates a box shape in the scene | `<BoxGeometry>` | `var geometry = new THREE.BoxGeometry()` |
+| Material | Defines the appearance of an object | `<MeshBasicMaterial>` | A basic material | A material is being applied to the box | It applies a basic material to the box | `<MeshBasicMaterial>` | `var material = new THREE.MeshBasicMaterial()` |
+| Mesh | Combines geometry and material to create an object | `<mesh>` | A solid object | A mesh is being created by combining geometry and material | It creates a solid object in the scene | `<mesh><BoxGeometry/><MeshBasicMaterial/></mesh>` | `var mesh = new THREE.Mesh(geometry, material)` |
+| Animation | Changes properties over time | `<useFrame>` | Time passing | The animation is updating the rotation of the box | It animates the box by rotating it | `<useFrame>({ clock }) => (box.current.rotation.y = clock.getElapsedTime())</useFrame>` | `function animate() { requestAnimationFrame(animate); box.rotation.y += 0.01; renderer.render(scene, camera); }` |
+| Controls | Provides user interaction | `<OrbitControls>` | User input | The controls are allowing the user to orbit the scene | They provide user interaction to the scene | `<OrbitControls>` | `controls = new THREE.OrbitControls(camera, renderer.domElement)` |
+| Loading Models | Imports 3D models | `<useLoader>` | Importing items | A 3D model is being loaded into the scene | It imports a 3D model into the scene | `<useLoader(GLTFLoader, '/path/to/model.glb')>` | `var loader = new GLTFLoader(); loader.load('/path/to/model.glb', function (gltf) { scene.add(gltf.scene); });` |
+
+These concepts are fundamental to creating 3D applications with React Three Fiber and can be taught to industrial professionals to prepare them for real-world projects. The analogies are designed to make these complex concepts easier to understand, relating them to our everyday experiences and senses.
