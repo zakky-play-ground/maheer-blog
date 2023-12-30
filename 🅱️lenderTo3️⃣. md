@@ -1,0 +1,15 @@
+Blender is a powerful tool for creating 3D models and animations. Here are some shortcuts and tips to help you create and export models suitable for use with React Three Fiber:
+
+1. **Adding Objects**: To add objects in Blender, press `Shift + A`. This opens a menu where you can select the type of object you want to add, such as a sphere, cube, or plane [Source 1](https://www.freecodecamp.org/news/blender-three-js-react-js/).
+
+2. **Adding Animations**: To add animations to your objects in Blender, switch to the Animation tab. Here, you can add points to a certain frame. For example, if you want to move a sphere, right-click on the object, choose "Insert Keyframe", then pick "Location". Adjust the object's position, move ahead a few frames on the object's animation timeline, and repeat the same process. To make the movement smoother, you can copy the initial keyframe and insert it at the end [Source 1](https://www.freecodecamp.org/news/blender-three-js-react-js/).
+
+3. **Texture Baking for Procedural Materials**: Blender allows you to use procedural nodes for your materials. However, these nodes may not be directly compatible with other software frameworks such as Three.js. To resolve this, you can use the texture baking feature in Blender [Source 1](https://www.freecodecamp.org/news/blender-three-js-react-js/).
+
+4. **Exporting the Model**: Once you've created and animated your model in Blender, you can export it as a `.glb` file. Go to File > Export > glTF 2.0 and export the file in the glTF Binary format. If your file is large, you can compress it before exporting by going to Geometry > Compression [Source 3](https://medium.com/@leannewerner/creating-cell-fractured-animations-using-blender-and-react-three-fiber-dbd0299d4767).
+
+5. **Implementing the Blender Model in the React.js Application**: After exporting your model, you can import it into your React.js application using the `gltfjsx` command. This command generates a JSX component from your GLTF file. Run the command `npx gltfjsx@6.1.4 public/blenderStuff/blenderFile.glb` in your terminal, replacing `blenderFile.glb` with the name of your exported file [Source 1](https://www.freecodecamp.org/news/blender-three-js-react-js/).
+
+6. **Adding Interactivity**: You can enhance user interactivity by adding components like OrbitControls from the Drei helper library. This enables scrolling and rotation within the model within the browser [Source 1](https://www.freecodecamp.org/news/blender-three-js-react-js/).
+
+Remember to store your Blender file within the `public` folder of your React.js application for this step.
