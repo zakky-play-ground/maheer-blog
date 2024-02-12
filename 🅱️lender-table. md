@@ -1,0 +1,15 @@
+To create a table in Blender in a single-line tutorial, follow these steps:
+
+1. Open Blender and start editing the default cube by selecting it (`A` key), then use `G`, `Z`, and `1` to lift and center the cube (`G` for grab, `Z` for constrain to axis, `1` for axis number) [1].
+2. Select the bottom face of the cube (`F` key), double-tap `G` to scale down its thickness [1].
+3. Switch to the top view (`7` on the numpad), then scale the table on the X and Y axes using `S` followed by `X` or `Y` [1].
+4. Change the render view to Solid Mode (`Z`) and enable Cavity in the viewport shader menu for a subtle highlight on the edges [1].
+5. Inset the top face of the table (`Ctrl + I`), then extrude it upward on the Z-axis (`G` and then `Z`) [1].
+6. Apply transformations (`Ctrl + A`) in Object Mode [1].
+7. Select the table and leg model in Edit Mode, snap the cursor to the center with `Shift + S`, then change the Origin Point to the snapped cursor in the Object Menu [1].
+8. Select a single leg, add the Mirror Modifier, and choose the table as the source to mirror [1].
+9. Join the objects using `Ctrl + J` [1].
+10. Delete unnecessary faces, use Proportional Edit mode (`O` key) to create spherical shapes on the table legs [1].
+11. Use the Mirror Modifier to duplicate legs, ensuring the pivotal points are central [1].
+
+Remember to adjust the details and proportions to fit your specific needs and preferences.
